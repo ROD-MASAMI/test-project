@@ -2,8 +2,10 @@ import React from "react";
 import BG from "../assets/Images/BG.jpg";
 import { TextInputs } from "../Components/Inputs";
 import { CustomButton } from "../Components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -13,6 +15,7 @@ const Login = () => {
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
+        // backgroundColor: "blueviolet",
       }}
     >
       <div
@@ -56,7 +59,12 @@ const Login = () => {
             }}
           >
             <span>Forgot Password?</span>
-            <CustomButton Length="10%" Title="Login" />
+            <CustomButton
+              onPress={() => navigate("/Home")}
+              Length="10%"
+              Title="Login"
+              color="lightgreen"
+            />
           </div>
         </div>
       </div>
